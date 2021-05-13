@@ -1,0 +1,20 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+
+<body>
+<h1>Add a friend:</h1>
+
+<form action="#" th:action="@{/friends}" th:object="${friend}" th:method="post">
+  <div>
+    <label th:for="firstName">First name:</label>
+    <input type="text" th:field="*{firstName}" />
+  </div>
+  <div>
+    <label th:for="lastName">Last name:</label>
+    <input type="text" th:field="*{lastName}" />
+  </div>
+  <input type="submit" value="Add to list of friends">
+</form>
+
+</body>
+</html>

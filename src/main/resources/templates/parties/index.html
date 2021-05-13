@@ -1,0 +1,15 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+
+<body>
+<h1>Let's have a kiki!</h1>
+
+<div>
+  <ul th:each="party : ${parties}" th:object="${party}" >
+    <li><a th:href="'parties/' + *{id}" th:text="*{name}"></a></li>
+  </ul>
+</div>
+
+<a href="/parties/new">Add a party</a>
+</body>
+</html>

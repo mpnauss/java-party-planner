@@ -1,0 +1,15 @@
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+
+<body>
+<h1>Here are your friends</h1>
+
+<div>
+  <ul th:each="friend : ${friends}" th:object="${friend}" >
+    <li th:text="*{getFullName()}"></a></li>
+  </ul>
+</div>
+
+<a href="/friends/new">Add a friend</a>
+</body>
+</html>

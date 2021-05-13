@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html th:fragment="layout (template)">
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <title>Party Time!</title>
+</head>
+<body>
+<th:block th:include="${template}"/>
+</body>
+</html>
